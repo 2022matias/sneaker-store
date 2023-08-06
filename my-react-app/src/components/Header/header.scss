@@ -1,0 +1,40 @@
+.header {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        width: 100px;
+    }
+
+    &__title {
+        font-size: xxx-large;
+        font-family: sans-serif;
+        font-style: italic;
+        text-shadow: 3px 3px 8px blue;
+        margin: 0;
+    }
+
+    &__separator {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+
+        &-line {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            p {
+                margin: 0 auto;
+            }
+        }
+
+        &-cart {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}

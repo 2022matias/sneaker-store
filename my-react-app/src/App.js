@@ -1,9 +1,8 @@
-import './App.css';
+import './App.scss';
 import { Routes, Route } from 'react-router-dom';
 import { CurrentUserContext } from './contexts/currentUserContext';
 import Main from './components/Main';
-import { NavLink } from 'react-router-dom';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 
