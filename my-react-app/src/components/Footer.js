@@ -2,7 +2,7 @@ function Footer() {
     return (
         <footer className="footer">
             <p>
-                &copy; 2022 Sneaker Store
+                &copy; 2023 Sneaker Store
             </p>
         </footer>
     )

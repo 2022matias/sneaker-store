@@ -1,6 +1,7 @@
-$primary-color: chocolate;
+$primary-color: linear-gradient(to bottom, #FF0701, #00FFBC);
 
 .page {
-  margin: 0 auto;
-  background-color: $primary-color;
+  background: $primary-color;
+  margin: 0;
+  padding: 0;
 }
