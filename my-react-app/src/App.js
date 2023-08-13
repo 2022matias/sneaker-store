@@ -1,6 +1,5 @@
 import './App.scss';
 // import { Routes, Route } from 'react-router-dom';
-import { CurrentUserContext } from './contexts/currentUserContext';
 import Main from './components/Main/Main';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
@@ -8,25 +7,19 @@ import Footer from './components/Footer';
 // import * as api from "./utils/api";
 import React, { useState } from 'react';
 import array from './components/data';
+import CardProvider from './contexts/cardProvider';
 
 function App() {
 
   const [shoes, setShoes] = useState([]);
 
   React.useEffect(() => {
-    // api.getInfo()
-    //   .then((data) => {
-    //     setshoes(data);
-    //   })
     setShoes(array.map(item => item));
   }, []);
 
-  // const shoes = array.map((item) => item
-  // );
-
   return (
     <div className="page">
-      <CurrentUserContext.Provider value={shoes}>
+      <CardProvider>
         <div className="page__content">
         </div>
         <div className="page__content">
@@ -42,7 +35,7 @@ function App() {
           <Route path="/" element={<Main />} />
         </Routes> */}
         <Footer />
-      </CurrentUserContext.Provider>
+      </CardProvider>
     </div>
 
   );

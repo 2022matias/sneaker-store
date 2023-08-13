@@ -1,31 +1,22 @@
 import { createContext } from "react";
-
+import { useState } from "react";
 export const CardContext = createContext();
 
 const { Provider } = CardContext;
 
-const CardProvider = () => {
-    return (
-        <Provider>
+const CardProvider = ({ children }) => {
+    const [cantidadEnElCarrito, setCantidadEnElCarrito] = useState(0);
+    function sumarAlCarrito(cantidad) {
+        setCantidadEnElCarrito(cantidadEnElCarrito + cantidad);
+    }
 
+    const valorContexto = { sumarAlCarrito, cantidadEnElCarrito }
+    return (
+        <Provider value={valorContexto}>
+            {children}
         </Provider>
     )
 }
 
 export default CardProvider;
 
-// export const contexto = React.createContext();
-
-// const contextoProvider = (props) => {
-//     // Initial Provider State
-//     const state = {};
-
-//     return (
-//         <contexto.Provider value={{ state: state }
-//         }>
-//             {props.children}
-//         </contexto.Provider >
-//     );
-// }
-
-// export default contextoProvider;
