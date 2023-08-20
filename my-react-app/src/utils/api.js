@@ -1,10 +1,6 @@
 export const getInfo = () => {
-    return fetch('https://shoes-collections.p.rapidapi.com/shoes', {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': '3890c549c3msh42cafdceb464867p1fcaf6jsnbfcdc4bd3784',
-            'X-RapidAPI-Host': 'shoes-collections.p.rapidapi.com'
-        }
+    return fetch("https://fakestoreapi.com/products", {
+        method: "GET"
     })
         .then(res => res.json())
         .then(data => {

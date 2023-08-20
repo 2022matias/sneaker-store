@@ -5,12 +5,19 @@ import { CardContext } from "../../contexts/cardProvider";
 function Card(props) {
     const { sumarAlCarrito } = useContext(CardContext);
     const [cantidadDeZapatillas, setCantidadDeZapatillas] = useState(0);
+    const [stockDisponible, setStockDisponible] = useState(props.shoes.stock);
 
-    const handleClick = (stock) => {
-        if (cantidadDeZapatillas < stock) {
+    const handleClickAdd = () => {
+        if (cantidadDeZapatillas < stockDisponible) {
             setCantidadDeZapatillas(cantidadDeZapatillas + 1);
         } else {
             alert("No hay mas stock");
+        }
+    }
+
+    const handleClickSubtract = () => {
+        if (cantidadDeZapatillas > 0) {
+            setCantidadDeZapatillas(cantidadDeZapatillas - 1);
         }
     }
 
@@ -23,7 +30,9 @@ function Card(props) {
 
     const handleSumarAlCarrito = () => {
         sumarAlCarrito(cantidadDeZapatillas);
+        setStockDisponible(stockDisponible - cantidadDeZapatillas);
         scrollToTop();
+        setCantidadDeZapatillas(0);
     }
     return (
         <>
@@ -34,10 +43,11 @@ function Card(props) {
                         <h3 className="card__title">{props.shoes.name}</h3>
                         <p className="card__description">{props.shoes.description}</p>
                         <p className="card__price">u$s {props.shoes.price}</p>
-                        <p className="card__stock">Stock: {props.shoes.stock}</p>
+                        <p className="card__stock">Stock: {stockDisponible}</p>
                         <p className="card__buy">{cantidadDeZapatillas}</p>
-                        <button className="card__button" onClick={() => handleClick(props.shoes.stock)}>+</button>
-                        <button className="card__button2" onClick={handleSumarAlCarrito}>Comprar</button>"
+                        <button className="card__button-add" onClick={handleClickAdd}>+</button>
+                        <button className="card__button-subtract" onClick={handleClickSubtract}>-</button>
+                        <button className="card__button-kart" onClick={handleSumarAlCarrito}>Comprar</button>
                     </div>
                 </article>
             </div >
