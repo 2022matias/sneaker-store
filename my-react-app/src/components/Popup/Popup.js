@@ -1,6 +1,7 @@
 import './popup.scss';
 import { useState, useEffect } from 'react';
 import { getInfo } from '../../utils/api';
+import closeIcon from '../../images/closeIcon.png'
 
 function Popup(props) {
 
@@ -34,7 +35,7 @@ function Popup(props) {
             timeoutId = setTimeout(changeImageAutomatically, 1500);
         }
         return () => clearTimeout(timeoutId);
-    }, [imagenes, autoChange, selectedIndex])
+    }, [imagenes, autoChange, selectedIndex, next])
 
     function previous() {
         if (selectedIndex === 0) {
@@ -61,20 +62,22 @@ function Popup(props) {
 
     return (
         props.popupVisible ? (
-            <div className='popup-opacity'>
-                <div className="popup-container">
+            <div className='opacity'>
+                <div className="popup">
                     <h2>Haga click en la imagen para visitar nuestras otras tiendas</h2>
-                    <div>
-                        <button className='popup-button' onClick={previous}>{"<"}</button>
-                        <img className='popup-img' src={selectedImage} alt="publicity" />
-                        <button className='popup-button' onClick={next}>{">"}</button>
+                    <div className='popup__container'>
+                        <button className='popup__button' onClick={previous}>{"<"}</button>
+                        <a href='https://avellanedaropa.com/' target='_blank' rel='noreferrer'>
+                            <img className='popup__img' src={selectedImage} alt="publicity" />
+                        </a>
+                        <button className='popup__button' onClick={next}>{">"}</button>
                     </div>
-                    <button onClick={props.togglePopup}>Cerrar</button>
+                    <img className='popup__button_close-icon' src={closeIcon} alt="close" onClick={props.togglePopup} />
                     <button onClick={() => { setAutoChange(!autoChange) }}>Autoplay On/Off</button>
                 </div>
             </div>
         ) : (
-            <div className="popup-container-hidden"></div>
+            <div className="popup__hidden"></div>
         )
 
     )
