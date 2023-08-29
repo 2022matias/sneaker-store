@@ -4,16 +4,13 @@ function NavBar() {
     return (
         <nav className="navbar">
             <ul className="navbar-nav">
-                <NavLink to="/man" className="navbar-link">
-                    Hombre
+                <NavLink to="/" className="navbar-link">
+                    Zapatillas
                 </NavLink>
-                <NavLink to="/girl" className="navbar-link">
-                    Mujer
+                <NavLink to="/locales" className="navbar-link">
+                    Locales
                 </NavLink>
-                <NavLink to="/company" className="navbar-link">
-                    Empresa
-                </NavLink>
-                <NavLink to="/contact" className="navbar-link">
+                <NavLink to="/contacto" className="navbar-link">
                     Contacto
                 </NavLink>
             </ul>

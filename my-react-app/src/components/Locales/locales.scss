@@ -1,0 +1,21 @@
+.locales {
+    display: flex;
+    width: 90%;
+    margin: auto;
+
+    &__texto {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        & img {
+            height: 250px;
+            width: 500px;
+        }
+    }
+}

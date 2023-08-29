@@ -1,0 +1,41 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+
+    &__form {
+        gap: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        background: #444;
+        border: 20px solid #000;
+        outline: 4px solid #5dd;
+    }
+
+    &__iconoEmail {
+        border-radius: 50%;
+        padding: 20px;
+        min-width: 250px;
+        max-width: 400px;
+    }
+
+    &__separator {
+        flex: 1;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        min-width: 250px;
+        padding: 20px;
+    }
+}
+
+.contacts__name,
+.contacts__email,
+.contacts__message,
+.contacts__button {
+    flex-grow: 1;
+    /* Hace que los elementos ocupen toda la altura disponible */
+    margin-bottom: 10px;
+    /* Agrega espacio entre los elementos si lo deseas */
+}
