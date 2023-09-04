@@ -11,6 +11,9 @@ import Locales from './components/Locales/Locales';
 import Contactos from './components/Contactos/Contactos';
 import PublicityPopup from './components/PublicityPopup/PublicityPopup';
 import ContactPopup from './components/ContactPopup/ContactPopup';
+import Inicio from './components/Inicio/Inicio';
+
+
 
 function App() {
 
@@ -32,6 +35,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Main shoes={shoes} />} />
+          <Route path='/inicio' element={<Inicio />} />
           <Route path='/locales' element={<Locales />} />
           <Route path='/contacto' element={<Contactos popupVisible={popupVisible} togglePopup={togglePopup} />} />
           <Route path="*" element={<Navigate to="/" />} />
