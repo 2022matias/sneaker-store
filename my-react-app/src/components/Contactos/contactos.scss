@@ -3,7 +3,6 @@
     flex-direction: column;
 
     &__form {
-        gap: 80px;
         display: flex;
         flex-wrap: wrap;
         width: 90%;
@@ -11,13 +10,18 @@
         background: #444;
         border: 20px solid #000;
         outline: 4px solid #5dd;
+
+        @media (min-width: 1100px) {
+            gap: 100px;
+        }
     }
 
     &__iconoEmail {
+        margin: auto;
         border-radius: 50%;
         padding: 20px;
-        min-width: 250px;
-        max-width: 400px;
+        min-width: 220px;
+        max-width: 300px;
     }
 
     &__separator {
@@ -27,15 +31,33 @@
         flex-direction: column;
         min-width: 250px;
         padding: 20px;
+        min-width: 440px;
+
+        @media (max-width: 926px) {
+            height: 302px;
+        }
+
+        & input {
+            max-height: 30px;
+            margin-bottom: 10px
+        }
+
+        & textarea {
+            flex-grow: 1;
+            margin-bottom: 10px
+        }
+
+        & button {
+            margin: auto;
+            width: 40%;
+
+        }
+
     }
 }
 
-.contacts__name,
-.contacts__email,
-.contacts__message,
-.contacts__button {
-    flex-grow: 1;
-    /* Hace que los elementos ocupen toda la altura disponible */
-    margin-bottom: 10px;
-    /* Agrega espacio entre los elementos si lo deseas */
+@media (min-width: 1100px) {
+    .contacts__form {
+        gap: 100px;
+    }
 }

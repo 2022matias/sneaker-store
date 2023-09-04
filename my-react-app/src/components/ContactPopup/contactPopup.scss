@@ -1,0 +1,10 @@
+.popup {
+    display: flex;
+    flex-direction: row;
+    padding-left: 30px;
+    gap: 30px;
+
+    &__image {
+        width: 200px;
+    }
+}

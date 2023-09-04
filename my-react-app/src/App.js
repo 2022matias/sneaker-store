@@ -6,10 +6,11 @@ import Footer from './components/Footer';
 import React, { useState } from 'react';
 import array from './components/data';
 import CardProvider from './contexts/cardProvider';
-import Popup from './components/Popup/Popup';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import Locales from './components/Locales/Locales';
 import Contactos from './components/Contactos/Contactos';
+import PublicityPopup from './components/PublicityPopup/PublicityPopup';
+import ContactPopup from './components/ContactPopup/ContactPopup';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
   }, []);
 
   function togglePopup() {
-    setPopupVisible(false);
+    setPopupVisible(!popupVisible);
   }
 
   return (
@@ -32,10 +33,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Main shoes={shoes} />} />
           <Route path='/locales' element={<Locales />} />
-          <Route path='/contacto' element={<Contactos />} />
+          <Route path='/contacto' element={<Contactos popupVisible={popupVisible} togglePopup={togglePopup} />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-        <Popup popupVisible={popupVisible} togglePopup={togglePopup} />
+        {/* <PublicityPopup popupVisible={popupVisible} togglePopup={togglePopup} /> */}
+        <ContactPopup popupVisible={popupVisible} togglePopup={togglePopup} />
         <Footer />
       </CardProvider>
     </div>
