@@ -1,7 +1,6 @@
 .navbar {
     width: 90%;
     margin: auto;
-    padding-top: 20px;
     padding-bottom: 50px;
 
     &-nav {
@@ -9,10 +8,26 @@
         padding: 0;
         display: flex;
         justify-content: space-evenly;
+
+        @media (max-width: 410px) {
+            flex-wrap: wrap;
+            column-gap: 90px;
+            row-gap: 20px;
+        }
     }
 
     &-link {
+        color: orangered;
         text-decoration: none;
         font-size: 30px;
+
+        &:hover {
+            background-color: orangered;
+            color: white;
+        }
+
+        @media (max-width: 950px) {
+            font-size: 20px;
+        }
     }
 }

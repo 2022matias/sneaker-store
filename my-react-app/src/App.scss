@@ -1,7 +1,21 @@
 $primary-color: linear-gradient(to bottom, #FF0701, #00FFBC);
+;
+
 
 .page {
   background: $primary-color;
   margin: 0;
   padding: 0;
+}
+
+.page {
+  background: repeating-linear-gradient(165deg, #d1f1dd, transparent 11px);
+  background-image: repeating-linear-gradient(165deg, rgb(209, 241, 221), transparent 11px);
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial
 }

@@ -44,9 +44,11 @@ function Card(props) {
                         <p className="card__description">{props.shoes.description}</p>
                         <p className="card__price">u$s {props.shoes.price}</p>
                         <p className="card__stock">Stock: {stockDisponible}</p>
-                        <p className="card__buy">{cantidadDeZapatillas}</p>
-                        <button className="card__button-add" onClick={handleClickAdd}>+</button>
-                        <button className="card__button-subtract" onClick={handleClickSubtract}>-</button>
+                        <div className="card__buy-container">
+                            <button className="card__button-subtract" onClick={handleClickSubtract}>-</button>
+                            <p className="card__buy">{cantidadDeZapatillas}</p>
+                            <button className="card__button-add" onClick={handleClickAdd}>+</button>
+                        </div>
                         <button className="card__button-kart" onClick={handleSumarAlCarrito}>Comprar</button>
                     </div>
                 </article>

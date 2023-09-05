@@ -34,8 +34,8 @@ function App() {
         <Header />
         <NavBar />
         <Routes>
-          <Route path="/" element={<Main shoes={shoes} />} />
-          <Route path='/inicio' element={<Inicio />} />
+          <Route path='/' element={<Inicio />} />
+          <Route path="/zapatillas" element={<Main shoes={shoes} />} />
           <Route path='/locales' element={<Locales />} />
           <Route path='/contacto' element={<Contactos popupVisible={popupVisible} togglePopup={togglePopup} />} />
           <Route path="*" element={<Navigate to="/" />} />

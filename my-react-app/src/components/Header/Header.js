@@ -12,10 +12,10 @@ function Header() {
             <img src={logoZapatillas} alt="logo" className="header__logo" />
             <h1 className="header__title">Sport shoes</h1>
             <div className="header__separator">
-                <div className="header__separator-line">
+                {/* <div className="header__separator-line">
                     <p>Crear cuenta</p>
                     <p>Iniciar sesión</p>
-                </div>
+                </div> */}
                 <div className="header__separator-line">
                     <img src={carritoDeCompras} alt="carrito de compras" className="header__separator-cart" />
                     <p className="header__separator-counter">{cantidadEnElCarrito}</p>

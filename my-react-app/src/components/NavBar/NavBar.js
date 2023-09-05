@@ -7,7 +7,7 @@ function NavBar() {
                 <NavLink to="/inicio" className="navbar-link">
                     Inicio
                 </NavLink>
-                <NavLink to="/" className="navbar-link">
+                <NavLink to="/zapatillas" className="navbar-link">
                     Zapatillas
                 </NavLink>
                 <NavLink to="/locales" className="navbar-link">

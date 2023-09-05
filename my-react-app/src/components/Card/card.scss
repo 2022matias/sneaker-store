@@ -2,7 +2,7 @@
 
     &__container {
         position: relative;
-        border: solid 2px blue;
+        border-top: 6px solid blue;
         display: flex;
         flex-direction: column;
         height: 650px;
@@ -10,8 +10,9 @@
     }
 
     &__img {
-        height: 200px;
+        height: 170px;
         width: 200px;
+        border-left: 3px solid blue;
     }
 
     &__info {
@@ -34,6 +35,13 @@
     &__price {
         font-weight: bold;
         margin: 0;
+    }
+
+    &__buy-container {
+        align-items: center;
+        margin: 0 auto;
+        display: flex;
+        gap: 25px;
     }
 
     &__button {
