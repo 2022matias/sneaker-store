@@ -34,11 +34,15 @@ function Card(props) {
         scrollToTop();
         setCantidadDeZapatillas(0);
     }
+
+    function handleClickShoe() {
+        props.onShoeClick(props.shoes);
+    }
     return (
         <>
             <div className="card">
                 <article className="card__container">
-                    <img className="card__img" src={props.shoes.image} alt="sneakers" />
+                    <img className="card__img" src={props.shoes.image} onClick={handleClickShoe} alt="sneakers" />
                     <div className="card__info">
                         <h3 className="card__title">{props.shoes.name}</h3>
                         <p className="card__description">{props.shoes.description}</p>

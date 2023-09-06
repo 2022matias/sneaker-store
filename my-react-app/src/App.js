@@ -12,13 +12,15 @@ import Contactos from './components/Contactos/Contactos';
 import PublicityPopup from './components/PublicityPopup/PublicityPopup';
 import ContactPopup from './components/ContactPopup/ContactPopup';
 import Inicio from './components/Inicio/Inicio';
+import ImagePopup from './components/ImagePopup/ImagePopup';
 
 
 
 function App() {
 
   const [shoes, setShoes] = useState([]);
-  const [popupVisible, setPopupVisible] = useState(true);
+  const [popupVisible, setPopupVisible] = useState(false);
+  const [selectedShoe, setSelectedShoe] = useState([]);
 
   React.useEffect(() => {
     setShoes(array.map(item => item));
@@ -28,6 +30,11 @@ function App() {
     setPopupVisible(!popupVisible);
   }
 
+  function onShoeClick(shoe) {
+    setSelectedShoe(shoe);
+    togglePopup();
+  }
+
   return (
     <div className="page">
       <CardProvider>
@@ -35,13 +42,14 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element={<Inicio />} />
-          <Route path="/zapatillas" element={<Main shoes={shoes} />} />
+          <Route path="/zapatillas" element={<Main shoes={shoes} onShoeClick={onShoeClick} />} />
           <Route path='/locales' element={<Locales />} />
           <Route path='/contacto' element={<Contactos popupVisible={popupVisible} togglePopup={togglePopup} />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         {/* <PublicityPopup popupVisible={popupVisible} togglePopup={togglePopup} /> */}
-        <ContactPopup popupVisible={popupVisible} togglePopup={togglePopup} />
+        {/* <ContactPopup popupVisible={popupVisible} togglePopup={togglePopup} /> */}
+        <ImagePopup popupVisible={popupVisible} togglePopup={togglePopup} shoe={selectedShoe} />
         <Footer />
       </CardProvider>
     </div>

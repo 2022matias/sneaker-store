@@ -14,7 +14,7 @@ function Main(props) {
         <>
             <div className='main'>
                 {copiaDelArray.map((shoe) =>
-                    <Card shoes={shoe} key={shoe.id} />
+                    <Card shoes={shoe} key={shoe.id} shoe={props.shoe} onShoeClick={props.onShoeClick} />
                 )}
             </div>
             <button onClick={handleLoadMore}>Mostrar mas</button>
