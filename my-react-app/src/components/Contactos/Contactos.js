@@ -9,7 +9,7 @@ function Contactos(props) {
 
     function handleSubmit(event) {
         event.preventDefault();
-        props.togglePopup();
+        props.togglePopup("contact");
         setNombre("");
         setEmail("");
         setConsulta("");

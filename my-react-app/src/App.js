@@ -19,20 +19,27 @@ import ImagePopup from './components/ImagePopup/ImagePopup';
 function App() {
 
   const [shoes, setShoes] = useState([]);
-  const [popupVisible, setPopupVisible] = useState(false);
+  const [popupVisible, setPopupVisible] = useState({
+    publicity: true,
+    contact: false,
+    image: false
+  });
   const [selectedShoe, setSelectedShoe] = useState([]);
 
   React.useEffect(() => {
     setShoes(array.map(item => item));
   }, []);
 
-  function togglePopup() {
-    setPopupVisible(!popupVisible);
+  function togglePopup(propertyName) {
+    setPopupVisible({
+      ...popupVisible,
+      [propertyName]: !popupVisible[propertyName]
+    });
   }
 
   function onShoeClick(shoe) {
     setSelectedShoe(shoe);
-    togglePopup();
+    togglePopup("image");
   }
 
   return (
@@ -47,9 +54,9 @@ function App() {
           <Route path='/contacto' element={<Contactos popupVisible={popupVisible} togglePopup={togglePopup} />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-        {/* <PublicityPopup popupVisible={popupVisible} togglePopup={togglePopup} /> */}
-        {/* <ContactPopup popupVisible={popupVisible} togglePopup={togglePopup} /> */}
-        <ImagePopup popupVisible={popupVisible} togglePopup={togglePopup} shoe={selectedShoe} />
+        <PublicityPopup popupVisible={popupVisible.publicity} togglePopup={togglePopup} />
+        <ContactPopup popupVisible={popupVisible.contact} togglePopup={togglePopup} />
+        <ImagePopup popupVisible={popupVisible.image} togglePopup={togglePopup} shoe={selectedShoe} />
         <Footer />
       </CardProvider>
     </div>
