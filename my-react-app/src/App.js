@@ -25,12 +25,14 @@ function App() {
     image: false
   });
   const [selectedShoe, setSelectedShoe] = useState([]);
+  const [propertyName, setPropertyName] = useState("");
 
   React.useEffect(() => {
     setShoes(array.map(item => item));
   }, []);
 
   function togglePopup(propertyName) {
+    setPropertyName(propertyName);
     setPopupVisible({
       ...popupVisible,
       [propertyName]: !popupVisible[propertyName]
@@ -55,8 +57,8 @@ function App() {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <PublicityPopup popupVisible={popupVisible.publicity} togglePopup={togglePopup} />
-        <ContactPopup popupVisible={popupVisible.contact} togglePopup={togglePopup} />
-        <ImagePopup popupVisible={popupVisible.image} togglePopup={togglePopup} shoe={selectedShoe} />
+        <ContactPopup popupVisible={popupVisible.contact} togglePopup={togglePopup} propertyName={propertyName} />
+        <ImagePopup popupVisible={popupVisible.image} togglePopup={togglePopup} shoe={selectedShoe} propertyName={propertyName} />
         <Footer />
       </CardProvider>
     </div>

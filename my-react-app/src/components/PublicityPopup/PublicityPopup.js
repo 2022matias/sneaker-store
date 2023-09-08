@@ -71,7 +71,10 @@ function PublicityPopup(props) {
                 </a>
                 <button className='popup__button' onClick={next}>{">"}</button>
             </div>
-            <img className='popup__button_close-icon' src={closeIcon} alt="close" onClick={() => props.togglePopup("publicity")} />
+            <img className='popup__button_close-icon' src={closeIcon} alt="close" onClick={() => {
+                props.togglePopup("publicity");
+                setAutoChange(!autoChange);
+            }} />
             <button onClick={() => { setAutoChange(!autoChange) }}>Autoplay On/Off</button>
         </Popup>
 
