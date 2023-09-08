@@ -7,7 +7,7 @@ function Popup(props) {
             <>
                 <div className='opacity' onClick={() => props.togglePopup(propertyName)}
                 ></div>
-                <div className={`popup ${propertyName == 'image' ? 'popup__image' : (propertyName === 'contact' ? 'popup__contact' : '')}`}>
+                <div className={`popup ${propertyName === 'image' ? 'popup__image' : (propertyName === 'contact' ? 'popup__contact' : '')}`}>
                     {props.children}
                 </div >
             </>

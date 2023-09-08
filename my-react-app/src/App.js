@@ -2,7 +2,7 @@ import './App.scss';
 import Main from './components/Main/Main';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
-import Footer from './components/Footer';
+import Footer from './components/Footer/Footer';
 import React, { useState } from 'react';
 import array from './components/data';
 import CardProvider from './contexts/cardProvider';

@@ -1,0 +1,53 @@
+.footer {
+    width: 90%;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    &__content {
+        text-align: center;
+
+        &-title {
+            color: red;
+            margin: 0;
+        }
+
+        &-text {
+            color: brown;
+        }
+    }
+
+    &__content2 {
+        text-align: center;
+
+        &-title {
+            color: red;
+            margin: 0;
+        }
+
+        &-social {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            &-icon {
+                color: black;
+                padding-left: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
+
+.footer__copyright {
+    text-align: right;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 30px;
+}
