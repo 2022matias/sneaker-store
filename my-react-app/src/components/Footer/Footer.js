@@ -15,9 +15,9 @@ function Footer() {
                     width="300"
                     height="160"
                     style={{ border: '0' }}
-                    allowfullscreen=""
+                    allowFullScreen=""
                     loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                    referrerPolicy="no-referrer-when-downgrade">
                 </iframe>
                 <div className="footer__content2">
                     <h2 className='footer__content2-title'>Nuestras redes sociales</h2>

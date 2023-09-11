@@ -2,6 +2,13 @@
     display: flex;
     width: 90%;
     margin: auto;
+    gap: 20px;
+
+    &__title {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 60px;
+    }
 
     &__texto {
         display: flex;
@@ -11,11 +18,15 @@
     &__img {
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 50px;
 
         & img {
-            height: 250px;
-            width: 500px;
+            max-height: 250px;
+            max-width: 500px;
+
+            @media (max-width:1000px) {
+                display: none;
+            }
         }
     }
 }

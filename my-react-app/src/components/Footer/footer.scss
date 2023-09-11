@@ -4,7 +4,9 @@
     padding-top: 60px;
     padding-bottom: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
 
     &__content {
         text-align: center;
