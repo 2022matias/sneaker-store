@@ -1,0 +1,26 @@
+.popup {
+
+    &__title {
+        margin: 0 auto;
+        text-align: center;
+
+        @media (max-width:675px) {
+            font-size: 16px;
+        }
+    }
+
+    &__img {
+
+        @media (max-width:850px) {
+            width: 150px;
+            height: 100px;
+        }
+    }
+
+    &__button {
+
+        @media (max-width:600px) {
+            display: none;
+        }
+    }
+}

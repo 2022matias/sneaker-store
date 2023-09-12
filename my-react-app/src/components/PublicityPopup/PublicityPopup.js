@@ -1,8 +1,9 @@
-import '../Popup/popup.scss';
+import './publicityPopup.scss';
 import Popup from '../Popup/Popup';
 import { useState, useEffect } from 'react';
 import { getInfo } from '../../utils/api';
-import closeIcon from '../../images/closeIcon.png'
+import closeIcon from '../../images/closeIcon.png';
+import './preloader.scss';
 
 function PublicityPopup(props) {
 
@@ -10,11 +11,13 @@ function PublicityPopup(props) {
     const [selectedImage, setSelectedImage] = useState(null);
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [autoChange, setAutoChange] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         getInfo()
             .then(data => {
                 setImagenes(data);
+                setLoading(false);
             })
             .catch(error => console.error(error));
     }, []);
@@ -63,11 +66,11 @@ function PublicityPopup(props) {
 
     return (
         <Popup popupVisible={props.popupVisible} togglePopup={props.togglePopup} >
-            <h2>Haga click en la imagen para visitar nuestras otras tiendas</h2>
+            <h2 className='popup__title'>Haga click en la imagen para visitar nuestras otras tiendas</h2>
             <div className='popup__container'>
                 <button className='popup__button' onClick={previous}>{"<"}</button>
                 <a href='https://avellanedaropa.com/' target='_blank' rel='noreferrer'>
-                    <img className='popup__img' src={selectedImage} alt="publicity" />
+                    {loading ? <i className="circle-preloader"></i> : <img className='popup__img' src={selectedImage} alt="publicity" />}
                 </a>
                 <button className='popup__button' onClick={next}>{">"}</button>
             </div>

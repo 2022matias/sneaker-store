@@ -17,7 +17,7 @@ function Contactos(props) {
 
     return (
         <div className='contacts'>
-            <h2>Contactos</h2>
+            <h2 className='contacts__title'>Contacto</h2>
             <form onSubmit={handleSubmit} className="contacts__form">
                 <img src={iconoEmail} alt="Icono Email" className="contacts__iconoEmail" />
                 <div className="contacts__separator">

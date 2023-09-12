@@ -12,12 +12,8 @@
         text-align: center;
 
         &-title {
-            color: red;
+            color: #0a1584;
             margin: 0;
-        }
-
-        &-text {
-            color: brown;
         }
     }
 
@@ -25,7 +21,7 @@
         text-align: center;
 
         &-title {
-            color: red;
+            color: #0a1584;
             margin: 0;
         }
 
@@ -42,14 +38,28 @@
             a {
                 text-decoration: none;
                 color: black;
+
+                &:hover {
+                    color: white;
+                    background-color: black;
+
+                    &:hover .footer__content2-social-icon {
+                        color: white;
+                    }
+                }
             }
         }
     }
+
+    &__copyright {
+        text-align: right;
+        width: 90%;
+        margin: auto;
+        padding-bottom: 30px;
+    }
 }
 
-.footer__copyright {
-    text-align: right;
-    width: 90%;
-    margin: auto;
-    padding-bottom: 30px;
-}
+
+// .footer__content2-social a:hover .footer__content2-social-icon {
+//     color: white;
+// }
