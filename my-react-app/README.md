@@ -1,5 +1,5 @@
 ##  Proyecto Final (Bootcamp Tripleten)
-`<link>` : <https://github.com>
+`<link>` : <https://2022matias.github.io/sneaker-store>
 #### Tecnologias utilizadas
 - Flexbox
 - Capacidades avanzadas de HTML y CSS
