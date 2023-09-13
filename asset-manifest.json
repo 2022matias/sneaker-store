@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/tu-repo/static/css/main.7a6a873c.css",
-    "main.js": "/tu-repo/static/js/main.9ca80f29.js",
-    "static/media/Nike.mp4": "/tu-repo/static/media/Nike.fadc0068144ed414723d.mp4",
-    "static/media/fontawesome-webfont.svg?v=4.7.0": "/tu-repo/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/espera.jpg": "/tu-repo/static/media/espera.1d13f05365ca8b3385b1.jpg",
-    "static/media/fontawesome-webfont.eot": "/tu-repo/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
-    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/tu-repo/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/closeIcon.png": "/tu-repo/static/media/closeIcon.db6ff98f44995b0e45ac.png",
-    "static/media/local1.webp": "/tu-repo/static/media/local1.a9793e85433816c732fc.webp",
-    "static/media/fontawesome-webfont.woff?v=4.7.0": "/tu-repo/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
-    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/tu-repo/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
-    "static/media/iconoEmail.jpg": "/tu-repo/static/media/iconoEmail.23457cb7507b8da946a9.jpg",
-    "static/media/local3.jpg": "/tu-repo/static/media/local3.6655d2424a07e7d451ce.jpg",
-    "static/media/local4.jpg": "/tu-repo/static/media/local4.99560237e8532f03161b.jpg",
-    "static/media/local2.jpg": "/tu-repo/static/media/local2.0cbbde2508ba250f9588.jpg",
-    "static/media/logoZapatillas.png": "/tu-repo/static/media/logoZapatillas.f8382ba037d1fd7319aa.png",
-    "index.html": "/tu-repo/index.html",
-    "main.7a6a873c.css.map": "/tu-repo/static/css/main.7a6a873c.css.map",
-    "main.9ca80f29.js.map": "/tu-repo/static/js/main.9ca80f29.js.map"
+    "main.css": "/sneaker-store/static/css/main.28a3cdd2.css",
+    "main.js": "/sneaker-store/static/js/main.a2b28f53.js",
+    "static/media/Nike.mp4": "/sneaker-store/static/media/Nike.fadc0068144ed414723d.mp4",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/sneaker-store/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/espera.jpg": "/sneaker-store/static/media/espera.1d13f05365ca8b3385b1.jpg",
+    "static/media/fontawesome-webfont.eot": "/sneaker-store/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/sneaker-store/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/closeIcon.png": "/sneaker-store/static/media/closeIcon.db6ff98f44995b0e45ac.png",
+    "static/media/local1.webp": "/sneaker-store/static/media/local1.a9793e85433816c732fc.webp",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/sneaker-store/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/sneaker-store/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/iconoEmail.jpg": "/sneaker-store/static/media/iconoEmail.23457cb7507b8da946a9.jpg",
+    "static/media/local3.jpg": "/sneaker-store/static/media/local3.6655d2424a07e7d451ce.jpg",
+    "static/media/local4.jpg": "/sneaker-store/static/media/local4.99560237e8532f03161b.jpg",
+    "static/media/local2.jpg": "/sneaker-store/static/media/local2.0cbbde2508ba250f9588.jpg",
+    "static/media/logoZapatillas.png": "/sneaker-store/static/media/logoZapatillas.f8382ba037d1fd7319aa.png",
+    "index.html": "/sneaker-store/index.html",
+    "main.28a3cdd2.css.map": "/sneaker-store/static/css/main.28a3cdd2.css.map",
+    "main.a2b28f53.js.map": "/sneaker-store/static/js/main.a2b28f53.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a6a873c.css",
-    "static/js/main.9ca80f29.js"
+    "static/css/main.28a3cdd2.css",
+    "static/js/main.a2b28f53.js"
   ]
 }
