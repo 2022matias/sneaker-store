@@ -1,15 +1,27 @@
-import Popup from '../Popup/Popup';
-import closeIcon from '../../images/closeIcon.png';
-import './imagePopup.scss';
+import Popup from "../Popup/Popup";
+import closeIcon from "../../images/closeIcon.png";
+import "./imagePopup.scss";
 
 function ImagePopup(props) {
-    return (
-        < Popup popupVisible={props.popupVisible} togglePopup={props.togglePopup} propertyName={props.propertyName}>
-            <img className="imagePopup" src={props.shoe.image} alt="Zapatilla deportiva" />
-            <img className='popup__button_close-icon' src={closeIcon} alt="close" onClick={() => props.togglePopup("image")} />
-        </Popup >
-    )
+  return (
+    <Popup
+      popupVisible={props.popupVisible}
+      togglePopup={props.togglePopup}
+      propertyName={props.propertyName}
+    >
+      <img
+        className="imagePopup"
+        src={props.shoe.image}
+        alt="Zapatilla deportiva"
+      />
+      <img
+        className="popup__button_close-icon"
+        src={closeIcon}
+        alt="close"
+        onClick={() => props.togglePopup("image")}
+      />
+    </Popup>
+  );
 }
 
 export default ImagePopup;
-
