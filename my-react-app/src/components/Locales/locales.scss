@@ -1,34 +1,34 @@
 .locales {
-    display: flex;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  gap: 20px;
+
+  &__title {
+    color: #0a1584;
+    font-size: 30px;
     width: 90%;
-    margin: auto;
-    gap: 20px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+  }
 
-    &__title {
-        color: #0a1584;
-        font-size: 30px;
-        width: 90%;
-        margin: 0 auto;
-        padding-bottom: 60px;
+  &__texto {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    & img {
+      max-height: 250px;
+      max-width: 500px;
+
+      @media (max-width: 1000px) {
+        display: none;
+      }
     }
-
-    &__texto {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__img {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-
-        & img {
-            max-height: 250px;
-            max-width: 500px;
-
-            @media (max-width:1000px) {
-                display: none;
-            }
-        }
-    }
+  }
 }

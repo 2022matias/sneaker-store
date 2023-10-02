@@ -1,64 +1,63 @@
 .footer {
+  width: 90%;
+  margin: auto;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px;
+
+  &__content {
+    text-align: center;
+
+    &-title {
+      color: #0a1584;
+      margin: 0;
+    }
+  }
+
+  &__content2 {
+    text-align: center;
+
+    &-title {
+      color: #0a1584;
+      margin: 0;
+    }
+
+    &-social {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      &-icon {
+        color: black;
+        padding-left: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          color: white;
+          background-color: black;
+
+          &:hover .footer__content2-social-icon {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    text-align: right;
     width: 90%;
     margin: auto;
-    padding-top: 60px;
-    padding-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 100px;
-
-    &__content {
-        text-align: center;
-
-        &-title {
-            color: #0a1584;
-            margin: 0;
-        }
-    }
-
-    &__content2 {
-        text-align: center;
-
-        &-title {
-            color: #0a1584;
-            margin: 0;
-        }
-
-        &-social {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-
-            &-icon {
-                color: black;
-                padding-left: 10px;
-            }
-
-            a {
-                text-decoration: none;
-                color: black;
-
-                &:hover {
-                    color: white;
-                    background-color: black;
-
-                    &:hover .footer__content2-social-icon {
-                        color: white;
-                    }
-                }
-            }
-        }
-    }
-
-    &__copyright {
-        text-align: right;
-        width: 90%;
-        margin: auto;
-        padding-bottom: 30px;
-    }
+    padding-bottom: 30px;
+  }
 }
-
 
 // .footer__content2-social a:hover .footer__content2-social-icon {
 //     color: white;
